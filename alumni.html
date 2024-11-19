@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Alumni</title>
+    <link rel="stylesheet" href="alumni.css">
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang di Website Alumni</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">Tentang Kami</a></li>
+                <li><a href="#members">Anggota</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>Tentang Kami</h2>
+        <p>Website ini dibuat untuk menghubungkan para alumni dan berbagi informasi penting.</p>
+    </section>
+
+    <section id="members">
+        <h2>Anggota Alumni</h2>
+        <input type="text" id="search" placeholder="Cari alumni berdasarkan nama atau jurusan..." onkeyup="filterMembers()">
+        
+        <div class="member" data-name="Nama Alumni" data-major="Sistem Informasi">
+            <h3>Nama:Dea Yulistiana Dewi </h3>
+            <p>Jurusan: Sistem Infromasi</p>
+            <p>Tahun Lulus: 2023</p>
+        </div>
+        <div class="member" data-name="Nama Alumni" data-major="Teknik Infromatika">
+            <h3>Nama: Almira Dwi Agustiani</h3>
+            <p>Jurusan: Teknik Informatika</p>
+            <p>Tahun Lulus: 2022</p>
+        </div>
+        <div class="member" data-name="Nama Almuni" data-major="Desain Komunikasi Visual">
+            <h3>Nama: Aisy Citresna Azzahra</h3>
+            <p>Jurusan: Desain Komunikasi Visual</p>
+            <p>Tahun Lulus: 2021</p>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Kontak Kami</h2>
+        <form>
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Pesan:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Kirim</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Website Alumni. Semua hak dilindungi.</p>
+    </footer>
+
+    <script>
+        function filterMembers() {
+            const input = document.getElementById('search');
+            const filter = input.value.toLowerCase();
+            const members = document.querySelectorAll('.member');
+
+            members.forEach(member => {
+                const name = member.getAttribute('data-name').toLowerCase();
+                const major = member.getAttribute('data-major').toLowerCase();
+
+                if (name.includes(filter) || major.includes(filter)) {
+                    member.style.display = ""; 
+                } else {
+                    member.style.display = "none"; 
+                }
+            });
+        }
+    </script>
+</body>
+</html>
