@@ -1,0 +1,99 @@
+body{
+    background-color: rgb(169, 192, 242);
+}
+header {
+    background: #2e64a6;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease; 
+}
+
+nav ul li a:hover {
+    color: #0a0a0a; 
+}
+
+section {
+    padding: 20px;
+    margin: 10px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(70, 17, 17, 0.1);
+}
+
+.member {
+    border: 1px solid #0a0a0a;
+    padding: 10px;
+    margin: 10px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.member:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    margin-top: 10px;
+    padding: 10px;
+    background: #2e64a6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Efek transisi untuk hover */
+}
+
+form button:hover {
+    background-color: #2e64a6;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #2e64a6;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+h2{
+    color: #2e64a6;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+h3{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
